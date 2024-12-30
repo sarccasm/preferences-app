@@ -1,0 +1,19 @@
+<div style="max-width: 400px; margin: 0 auto;">
+  <h2>Preferences</h2>
+  <label for="subjectInterests">Subject Interests</label>
+  <input
+    id="subjectInterests"
+    type="text"
+    [(ngModel)]="subjectInterests"
+    (input)="onSubjectChange($event)"
+    placeholder="Enter your interests"
+    style="width: 100%; padding: 8px; margin-bottom: 10px;"
+  />
+  <button
+    [disabled]="!isSaveEnabled"
+    (click)="saveChanges()"
+    style="padding: 8px 16px; background-color: #007bff; color: #fff; border: none; cursor: pointer;"
+  >
+    Save Changes
+  </button>
+</div>
